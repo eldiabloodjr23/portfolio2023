@@ -1,4 +1,4 @@
-'use client'
+
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";

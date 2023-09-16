@@ -28,6 +28,7 @@ const Skills = () => {
   className='flex items-center justify-center rounded-full font-semibold bg-cyan-800
     cursor-pointer text-light p-8 shadow-dark'
   whileHover={{ scale: 1.2 }}
+  style={{ width: '100px', height: '100px' }} // Adjust the size as needed
 >
   Web
 </motion.div>
