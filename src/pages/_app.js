@@ -21,11 +21,11 @@ export default function MyApp({ Component, pageProps }) {
       <main
         className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}
       >
-      
+        <IntroScreen/>
         <Navbar />
         <Side/>
         <Component {...pageProps} />
-      
+      <Footer/>
       </main>
     </>
   );
