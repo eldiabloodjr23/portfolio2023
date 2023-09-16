@@ -12,7 +12,7 @@ const IntroScreen = () => {
   const [isIntroComplete, setIsIntroComplete] = useState(false);
 
   useEffect(() => {
-    // Lock scrolling when the component mounts
+   
     document.body.style.overflow = "hidden";
 
     const interval = setInterval(() => {
@@ -23,7 +23,7 @@ const IntroScreen = () => {
       clearInterval(interval);
       setIsIntroComplete(true);
 
-      // Unlock scrolling when the animation is complete
+    
       document.body.style.overflow = "auto";
     }, introDuration * 1000);
 
@@ -31,7 +31,7 @@ const IntroScreen = () => {
   }, []);
 
   useEffect(() => {
-    // When the component mounts, push the route to trigger the intro
+
     router.push("/");
   }, []);
 
@@ -51,7 +51,7 @@ const IntroScreen = () => {
           transition={{ duration: duration }}
         >
           <motion.h1
-            className="text-white text-7xl"
+            className="text-white text-7xl cursor-pointer"
             key={greetings[currentGreetingIndex]}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

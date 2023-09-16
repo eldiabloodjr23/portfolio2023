@@ -28,8 +28,8 @@ const Navbar = () => {
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/project" title="Projects" className="mx-4"/>
-        <CustomLink href="/articles" title="Contact" className="ml-4" />
+        <CustomLink href="/projects" title="Projects" className="mx-4"/>
+        <CustomLink href="/contact" title="Contact" className="ml-4" />
       
       </nav>
 
