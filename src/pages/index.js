@@ -7,7 +7,8 @@ import heroimg from "../../public/images/profile/house.png";
 import Link from "next/link";
 import { LinkArrow, SunIcon } from "@/components/Icons";
 import IntroScreen from "../components/IntroScreen";
-
+import { BigHead } from '@bigheads/core'
+import HeroText from "@/components/HeroText";
 
 
 export default function Home() {
@@ -22,26 +23,43 @@ export default function Home() {
         <Layout classname="pt-0 ">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
-              <div className="relative w-full h-auto ml-15  ">
-                <Image
-                  src={heroimg}
-                  alt="heroimg"
-                  width={700}
-                  height={400}
-                  className="rounded-lg"
-                />
+              <div className="relative w-[85%] h-auto ml-15   ">
+                <div className=" ">
+              <BigHead
+    accessory="roundGlasses"
+    body="chest"
+    circleColor="blue"
+    clothing="shirt"
+    clothingColor="black"
+    eyebrows="leftLowered"
+    eyes="normal"
+    faceMask={false}
+    faceMaskColor="black"
+    facialHair="mediumBeard"
+    graphic="react"
+    hair="none"
+    hairColor="black"
+    hat="beanie"
+    hatColor="blue"
+    lashes={false}
+    lipColor="green"
+    mask
+    mouth="serious"
+    skinTone="brown"
+    size="small"
+    
+  />
+  </div>
               </div>
             </div>
             <div className="w-1/2 flex flex-col items-center self-center whitespace-break-spaces">
               <AnimatedText
-                text="Turning Vision Into Reality   With Code And Design."
+                text="Turning Vision Into Reality           With Code And Design."
                 className="!text-5xl !text-left whitespace-break-spaces"
               />
               <p className="my-4 text-base font-medium">
-                As a <span className="text-cyan-500">full-stack developer</span>
-                , I love transforming ideas into innovative web applications.
-                I
-                am your go-to partner for creating digital experiences that
+                As a <span className="text-cyan-500 white">full-stack developer</span>
+                , I love transforming ideas into innovative web applications.  I&rsquo;m your go-to partner for creating digital experiences that
                 stand out in todays fast-paced online landscape.
               </p>
               <div className="flex items-center self-start mt-2 justify-between">
@@ -50,8 +68,8 @@ export default function Home() {
                   href="/mycv.pdf"
                   target="_blank"
                 >
-                  <span class="absolute inset-0 border border-cyan-600 group-active:border-cyan-500"></span>
-                  <span class=" border border-cyan-600 bg-cyan-600 px-12 py-3 transition-transform active:border-cyan-500 active:bg-cyan-500 group-hover:-translate-x-1 group-hover:-translate-y-1 flex items-center">
+                  <span class="absolute inset-0 border border-cyan-400 group-active:border-cyan-500"></span>
+                  <span class=" border border-cyan-400 bg-sky-400 px-12 py-3 transition-transform active:border-cyan-500 active:bg-cyan-500 group-hover:-translate-x-1 group-hover:-translate-y-1 flex items-center">
                     Resume
                     <SunIcon className="w-5 ml-1" />
                   </span>
@@ -69,7 +87,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+          <HeroText/>
           
         </Layout>
       </main>

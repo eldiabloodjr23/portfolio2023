@@ -23,8 +23,10 @@ export default function MyApp({ Component, pageProps }) {
       >
         <IntroScreen/>
         <Navbar />
+        
         <Side/>
         <Component {...pageProps} />
+        <Footer/>
       
       </main>
     </>

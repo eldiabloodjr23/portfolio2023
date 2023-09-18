@@ -6,11 +6,12 @@ import Layout from "@/components/Layout";
 import profilePic1 from "../../public/images/profile/developer-pic-1.png";
 import profilePic2 from "../../public/images/profile/developer-pic-2.png";
 import profilePic3 from "../../public/images/profile/developer-pic-3.png";
-import house from "../../public/images/profile/house.jpg"
+import house from "../../public/images/profile/house.png"
 import Image from "next/image";
 import {  useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 
 
 
@@ -151,6 +152,10 @@ const About = () => {
           <div className="mb-10"></div>
           <Skills/>
           <Experience />
+          <div>
+        
+          </div>
+          
         </Layout>
       </main>
     </>

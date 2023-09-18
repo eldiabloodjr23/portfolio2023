@@ -24,31 +24,30 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const Navbar = () => {
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between sticky top-0 bg-white z-10">
-      <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/projects" title="Projects" className="mx-4"/>
-        <CustomLink href="/contact" title="Contact" className="ml-4" />
-      
-      </nav>
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between sticky top-0 bg-white z-10 border-b-2 border-gray-300">
+  <nav>
+    <CustomLink href="/" title="Home" className="mr-4" />
+    <CustomLink href="/about" title="About" className="mx-4" />
+    <CustomLink href="/projects" title="Projects" className="mx-4"/>
+    <CustomLink href="/contact" title="Contact" className="ml-4" />
+  </nav>
 
-      <nav className="flex items-center justify-center flex-wrap">
-        <motion.a href="https://twitter.com/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className="w-6 mx-4">
-          <LinkedInIcon/>
-        </motion.a>
-        <motion.a href="https://twitter.com/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className="w-6 mx-4 ">
-          <GithubIcon/>
-        </motion.a>
-        <motion.a href="https://twitter.com/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className="w-6 ml-4">
-          <TwitterIcon/>
-        </motion.a>
-      </nav>
+  <nav className="flex items-center justify-center flex-wrap">
+    <motion.a href="https://twitter.com/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className="w-6 mx-4">
+      <LinkedInIcon/>
+    </motion.a>
+    <motion.a href="https://twitter.com/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className="w-6 mx-4 ">
+      <GithubIcon/>
+    </motion.a>
+    <motion.a href="https://twitter.com/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className="w-6 ml-4">
+      <TwitterIcon/>
+    </motion.a>
+  </nav>
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
-        <Logo />
-      </div>
-    </header>
+  <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
+    <Logo />
+  </div>
+</header>
   );
 };
 

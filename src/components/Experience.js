@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useScroll, motion } from 'framer-motion'; // Import useScroll from framer-motion
 import Lilcon from './Lilcon';
+import Footer from './Footer';
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
     const ref = useRef(null);
@@ -34,7 +35,7 @@ const Experience = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center start"], // Fix the typo here
+    offset: ["start end", "center start"], 
   });
 
   return (
@@ -44,12 +45,13 @@ const Experience = () => {
       <div ref={ref} className='w-[75%] mx-auto relative'>
         <motion.div
         style={{scaleY:scrollYProgress}}
+        
           className='absolute left-9 top-1 w-[4px] h-full bg-cyan-900 origin-top' />
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           <div>
             <Details
               position="Full Stack Developer"
-              time="January 2022 - August 2023"
+              time="January 2022 - Present"
               companyLink="https://bevy.city/"
               company="Bevy"
               work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
@@ -76,9 +78,11 @@ const Experience = () => {
               work="Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
             />
             {/* Add more Details components as needed */}
+            <Lilcon/>
           </div>
         </ul>
       </div>
+      
     </div>
   )
 }
