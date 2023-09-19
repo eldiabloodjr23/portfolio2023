@@ -9,6 +9,7 @@ import { LinkArrow, SunIcon } from "@/components/Icons";
 import IntroScreen from "../components/IntroScreen";
 import { BigHead } from '@bigheads/core'
 import HeroText from "@/components/HeroText";
+import LoadingLine from "@/components/LoadingLine";
 
 
 export default function Home() {
@@ -24,8 +25,8 @@ export default function Home() {
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
               <div className="relative w-[85%] h-auto ml-15   ">
-                <div className=" ">
-              <BigHead
+              <div className=" animate-bounce-slow">
+  <BigHead
     accessory="roundGlasses"
     body="chest"
     circleColor="blue"
@@ -47,9 +48,8 @@ export default function Home() {
     mouth="serious"
     skinTone="brown"
     size="small"
-    
   />
-  </div>
+</div>
               </div>
             </div>
             <div className="w-1/2 flex flex-col items-center self-center whitespace-break-spaces">
@@ -88,6 +88,8 @@ export default function Home() {
             </div>
           </div>
           <HeroText/>
+         <LoadingLine/>
+         
           
         </Layout>
       </main>

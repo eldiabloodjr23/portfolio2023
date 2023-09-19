@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const greetings = ["Hello", "Bonjour", "Ahoj", "你好", "Hola!"];
-const duration = 0.7; // Duration for each greeting in seconds
-const introDuration = 3.3; // Total intro duration in seconds
+const duration = 0.4; // Duration for each greeting in seconds
+const introDuration = 2.0; // Total intro duration in seconds
 
 const IntroScreen = () => {
   const router = useRouter();
@@ -30,8 +30,10 @@ const IntroScreen = () => {
   }, []);
 
   useEffect(() => {
-    router.push("/");
-  }, []);
+    if (!isIntroComplete) {
+      router.push("/");
+    }
+  }, [isIntroComplete]);
 
   const navigateToMainContent = () => {
     router.push("/");

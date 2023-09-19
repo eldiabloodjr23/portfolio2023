@@ -38,7 +38,7 @@ const FeaturedProject = ({ type, title, summary, img, link, link2 }) => {
   };
 
   return (
-    <article className='p-12 w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl'>
+    <article className='p-12 w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl hover:bg-sky-100 transition duration-500 ease-in-out'>
       <Link href={link} target='_blank' className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
         <motion.div
           whileHover='hover'
@@ -114,7 +114,7 @@ const Project = ({ title, type, img, link, github }) => {
   };
 
   return (
-    <article className='w-full flex items-center flex-col justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative'>
+    <article className='w-full flex items-center flex-col justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative hover:bg-sky-200 transition duration-500 ease-in-out'>
       <Link href={link} target='_blank' className='w-full cursor-pointer overflow-hidden rounded-lg'>
         <motion.div
           whileHover='hover'

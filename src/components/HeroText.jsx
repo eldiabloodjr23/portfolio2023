@@ -27,6 +27,7 @@ const HeroText = () => {
           the <span className='text-cyan-500'>code</span>
         </h1>
       </motion.div>
+      
     </div>
   );
 };

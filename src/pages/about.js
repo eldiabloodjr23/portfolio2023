@@ -12,6 +12,7 @@ import {  useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
+import {motion} from "framer-motion"
 
 
 
@@ -83,7 +84,11 @@ const About = () => {
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-16">
+          <div>
           <AnimatedText text="Passion Fuels Purpose" className="mb-20" />
+          
+          </div>
+        
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-cyan-800 mt-5">
