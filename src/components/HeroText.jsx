@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const HeroText = () => {
   const fadeInAnimation = {
@@ -14,20 +14,18 @@ const HeroText = () => {
   };
 
   return (
-    <div className='h-full'>
+    <div className="h-full">
       <motion.div
-        className='flex justify-center'
-        initial='hiddn'
-        animate='visible'
+        className="flex justify-center"
+        initial="hiddn"
+        animate="visible"
         variants={fadeInAnimation}
       >
-        <h1 className='text-5xl pt-64 capitalize'>
-          first{' '}
-          <span className='text-cyan-500'>solve</span> the problem then write
-          the <span className='text-cyan-500'>code</span>
+        <h1 className="text-5xl pt-64 capitalize">
+          first <span className="text-cyan-500">solve</span> the problem then
+          write the <span className="text-cyan-500">code</span>
         </h1>
       </motion.div>
-      
     </div>
   );
 };

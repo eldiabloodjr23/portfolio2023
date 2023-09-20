@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
@@ -6,55 +5,34 @@ import Layout from "@/components/Layout";
 import profilePic1 from "../../public/images/profile/developer-pic-1.png";
 import profilePic2 from "../../public/images/profile/developer-pic-2.png";
 import profilePic3 from "../../public/images/profile/developer-pic-3.png";
-import house from "../../public/images/profile/house.png"
+import house from "../../public/images/profile/house.png";
 import Image from "next/image";
-import {  useInView, useMotionValue, useSpring } from "framer-motion";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
+const AnimatedNumbers = ({ value }) => {
+  const ref = useRef(null);
+  const motionValue = useMotionValue[0];
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView({ ref });
 
-
-
-
-const AnimatedNumbers = ({value}) => {
-
-const ref = useRef(null)
-const motionValue = useMotionValue[0];
-const springValue = useSpring(motionValue, {duration: 3000})
-const isInView = useInView({ref});
-
-useEffect(() => {
-    if(isInView){
+  useEffect(() => {
+    if (isInView) {
       motionValue.set(value);
     }
-}, [isInView, value, motionValue])
+  }, [isInView, value, motionValue]);
 
-useEffect(() => {
-  springValue.on("change", (latest) => {
-    console.log(latest)
-  })
-})
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      
+    });
+  });
 
-
-
-
-    return <span ref={ref}></span>  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  return <span ref={ref}></span>;
+};
 
 const About = () => {
   const [currentImage, setCurrentImage] = useState(profilePic1);
@@ -85,21 +63,24 @@ const About = () => {
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-16">
           <div>
-          <AnimatedText text="Passion Fuels Purpose" className="mb-20" />
-          
+            <AnimatedText text="Passion Fuels Purpose" className="mb-20" />
           </div>
-        
+
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-cyan-800 mt-5">
                 Bio
               </h2>
               <div className="font-medium my-4">
-  My name is Kamil, and I am a dedicated and enthusiastic
-  <div>full-stack developer. With a strong passion for coding and</div>
-  <div>problem-solving, I have embarked on a journey to create</div>
-  <div>innovative and functional digital solutions.</div>
-</div>
+                My name is Kamil, and I am a dedicated and enthusiastic
+                <div>
+                  full-stack developer. With a strong passion for coding and
+                </div>
+                <div>
+                  problem-solving, I have embarked on a journey to create
+                </div>
+                <div>innovative and functional digital solutions.</div>
+              </div>
               <div className="font-medium my-3">
                 In my career, I have honed my skills in both front-end and
                 back-end development. On the front-end, I specialize in crafting
@@ -107,7 +88,7 @@ const About = () => {
                 technologies like React, Next JS, and JavaScript. I enjoy the
                 art of turning design concepts into interactive web experiences.
               </div>
-             
+
               <div className="font-medium my-4">
                 {" "}
                 I also value collaboration and teamwork. Building great software
@@ -123,44 +104,50 @@ const About = () => {
               className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark"
               style={imageTransitionStyle}
             >
-              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] "  />
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] " />
               <Image
                 src={currentImage}
                 alt="kamil"
                 className="w-full h-auto rounded-xl cursor-cell "
+                priority
+                sizes="(max-width: 768pxpx) 100vw,
+                (max-width : 1200px) 50vw"
               />
             </div>
-        
+
             <div className="col-span-2 flex flex-col items-end justify-between">
               <div className="flex flex-col items-end justify-center mb-6">
-                <span className="inline-block text-4xl font-bold text-cyan-800"  >100%</span>
+                <span className="inline-block text-4xl font-bold text-cyan-800">
+                  100%
+                </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
-                 work effort | mindset ✔️
+                  work effort | mindset ✔️
                 </h2>
               </div>
 
               <div className="flex flex-col items-end justify-center mb-10">
-                <span className="inline-block text-4xl font-bold text-cyan-800" >40+</span>
+                <span className="inline-block text-4xl font-bold text-cyan-800">
+                  40+
+                </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   project completed 🏆
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center mb-10">
-                <span className="inline-block text-4xl font-bold text-cyan-800" >6+</span>
+                <span className="inline-block text-4xl font-bold text-cyan-800">
+                  6+
+                </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   years of experience 📚
                 </h2>
               </div>
             </div>
           </div>
-         
+
           <div className="mb-10"></div>
-          <Skills/>
+          <Skills />
           <Experience />
-          <div>
-        
-          </div>
-          
+          <div></div>
         </Layout>
       </main>
     </>

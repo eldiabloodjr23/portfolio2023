@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { GithubIcon } from '@/components/Icons'
 import project1 from '../../public/images/projects/bevyproject.png'
+import project2 from "../../public/images/svgs/lms.png"
 
 import {motion} from "framer-motion";
 
@@ -187,11 +188,11 @@ const Projects = () => {
         </div>
         <div className='col-span-6'>
             <Project
-            title="Bevy city"
-            summary="In this successfully completed project, we designed and developed the Bevy Logistics Web App, a multifunctional platform that serves as a hub for  clients and prospective couriers. The Web App offers a seamless and intuitive experience for users on both sides of our logistics operations."
+            title="Kurzora"
+        
             link="https://bevy.city/"
-            type="Featured Project"
-            img={project1}
+            type="LMS System"
+            img={project2}
             />
         </div>
         <div className='col-span-6'>

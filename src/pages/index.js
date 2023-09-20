@@ -48,6 +48,7 @@ export default function Home() {
     mouth="serious"
     skinTone="brown"
     size="small"
+    
   />
 </div>
               </div>
@@ -59,7 +60,7 @@ export default function Home() {
               />
               <p className="my-4 text-base font-medium">
                 As a <span className="text-cyan-500 white">full-stack developer</span>
-                , I love transforming ideas into innovative web applications.  I&rsquo;m your go-to partner for creating digital experiences that
+                , I love transforming ideas into innovative web applications. I&rsquo;m your  <br/>go-to partner for creating digital experiences that
                 stand out in todays fast-paced online landscape.
               </p>
               <div className="flex items-center self-start mt-2 justify-between">

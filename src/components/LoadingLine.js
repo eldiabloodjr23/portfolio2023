@@ -26,7 +26,7 @@ const LoadingLine = () => {
 				
 			</div>
 		</div>
-		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-black dark:text-gray-100">
+		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-slate-200 dark:text-gray-100">
 			<div className="flex justify-center p-2 align-middle rounded-full sm:p-4 dark:bg-sky-400">
 			<Image
         src={icon1}
@@ -37,7 +37,7 @@ const LoadingLine = () => {
       />
 			</div>
 			<div className="flex flex-col justify-center align-middle">
-			<p className="text-3xl font-medium leadi">CODE</p>
+			<p className="text-3xl font-medium leadi text-black">CODE</p>
 			
 			</div>
 		</div>
