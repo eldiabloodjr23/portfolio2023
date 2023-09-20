@@ -47,7 +47,11 @@ const FeaturedProject = ({ type, title, summary, img, link, link2 }) => {
           variants={imageVariants}
           className='w-full h-auto rounded-lg overflow-hidden'
         >
-          <Image src={img} alt={title} className='w-full h-auto' />
+          <Image src={img} alt={title} className='w-full h-auto'
+           priority
+           sizes="(max-width: 768pxpx) 100vw,
+           (max-width : 1200px) 50vw"
+          />
         </motion.div>
       </Link>
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
@@ -123,7 +127,11 @@ const Project = ({ title, type, img, link, github }) => {
           variants={imageVariants}
           className='w-full h-auto rounded-lg overflow-hidden'
         >
-          <Image src={img} alt={title} className='w-full h-auto' />
+          <Image src={img} alt={title} className='w-full h-auto' 
+           priority
+           sizes="(max-width: 768pxpx) 100vw,
+           (max-width : 1200px) 50vw"
+          />
         </motion.div>
       </Link>
       <div className='w-full flex flex-col items-start justify-between mt-4'>
@@ -202,6 +210,7 @@ const Projects = () => {
             link="https://bevy.city/"
             type="Featured Project"
             img={project1}
+            
             />
         </div>
         <div className='col-span-12'>
