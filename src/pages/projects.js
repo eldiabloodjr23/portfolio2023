@@ -51,6 +51,7 @@ const FeaturedProject = ({ type, title, summary, img, link, link2 }) => {
            priority
            sizes="(max-width: 768pxpx) 100vw,
            (max-width : 1200px) 50vw"
+           
           />
         </motion.div>
       </Link>

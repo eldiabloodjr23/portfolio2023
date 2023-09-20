@@ -71,7 +71,7 @@ const LoadingLine = () => {
         alt="Your Image"
         width={36}  // Set the width to 9rem (9 * 4)
         height={36} // Set the height to 9rem (9 * 4)
-        className="h-9 w-9" // Apply Tailwind CSS classes for height and width
+        className="h-9 w-9 " // Apply Tailwind CSS classes for height and width
 		priority
                 sizes="(max-width: 768pxpx) 100vw,
                 (max-width : 1200px) 50vw"
