@@ -9,7 +9,7 @@ const LoadingLine = () => {
     <div>
 <section className="p-6 my-6 bg-light dark:text-gray-100 pt-64">
 	<div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
-		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-black dark:text-gray-100">
+		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-slate-200 text-black">
 			<div className="flex justify-center p-2 align-middle rounded-full sm:p-4 dark:bg-sky-400">
 				<div className='w-9 h-9'>
 				<Image
@@ -18,6 +18,9 @@ const LoadingLine = () => {
         width={36}  // Set the width to 9rem (9 * 4)
         height={36} // Set the height to 9rem (9 * 4)
         className="h-9 w-9" // Apply Tailwind CSS classes for height and width
+		priority
+                sizes="(max-width: 768pxpx) 100vw,
+                (max-width : 1200px) 50vw"
       />
 				</div>
 			</div>
@@ -26,7 +29,7 @@ const LoadingLine = () => {
 				
 			</div>
 		</div>
-		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-slate-200 dark:text-gray-100">
+		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-slate-200 text-black">
 			<div className="flex justify-center p-2 align-middle rounded-full sm:p-4 dark:bg-sky-400">
 			<Image
         src={icon1}
@@ -34,6 +37,9 @@ const LoadingLine = () => {
         width={36}  // Set the width to 9rem (9 * 4)
         height={36} // Set the height to 9rem (9 * 4)
         className="h-9 w-9" // Apply Tailwind CSS classes for height and width
+		priority
+                sizes="(max-width: 768pxpx) 100vw,
+                (max-width : 1200px) 50vw"
       />
 			</div>
 			<div className="flex flex-col justify-center align-middle">
@@ -41,7 +47,7 @@ const LoadingLine = () => {
 			
 			</div>
 		</div>
-		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-black dark:text-gray-100">
+		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-slate-200 text-black">
 			<div className="flex justify-center p-2 align-middle rounded-full sm:p-4 dark:bg-sky-400">
 			<Image
         src={icon4}
@@ -49,13 +55,16 @@ const LoadingLine = () => {
         width={36}  // Set the width to 9rem (9 * 4)
         height={36} // Set the height to 9rem (9 * 4)
         className="h-9 w-9" // Apply Tailwind CSS classes for height and width
+		priority
+                sizes="(max-width: 768pxpx) 100vw,
+                (max-width : 1200px) 50vw"
       />
 			</div>
 			<div className="flex flex-col justify-center align-middle">
 			<p className="text-3xl font-medium leadi">SLEEP</p>
 			</div>
 		</div>
-		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 dark:bg-black dark:text-gray-100">
+		<div className="flex p-4 space-x-4 rounded-lg md:space-x-6 bg-slate-200 text-black">
 			<div className="flex justify-center p-2 align-middle rounded-full sm:p-4 dark:bg-sky-400">
 			<Image
         src={icon3}
@@ -63,6 +72,9 @@ const LoadingLine = () => {
         width={36}  // Set the width to 9rem (9 * 4)
         height={36} // Set the height to 9rem (9 * 4)
         className="h-9 w-9" // Apply Tailwind CSS classes for height and width
+		priority
+                sizes="(max-width: 768pxpx) 100vw,
+                (max-width : 1200px) 50vw"
       />
 			</div>
 			<div className="flex flex-col justify-center align-middle">
