@@ -29,12 +29,6 @@ const IntroScreen = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (!isIntroComplete) {
-      router.push("/");
-    }
-  }, [isIntroComplete]);
-
   const navigateToMainContent = () => {
     router.push("/");
   };
@@ -66,11 +60,14 @@ const IntroScreen = () => {
         <motion.div
           key="main-content"
           className="flex justify-center items-center h-full"
-          initial={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: duration }}
           onAnimationComplete={navigateToMainContent}
-        ></motion.div>
+        >
+          {/* Render your main content here */}
+        </motion.div>
       )}
     </AnimatePresence>
   );
